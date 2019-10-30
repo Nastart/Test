@@ -1,7 +1,14 @@
-import telebot
+# coding=utf-8
+import config
+#import telebot
+from telebot import TeleBot, types
 
-bot = telebot.TeleBot('868981945:AAGR0HE-ntDlgD4C-dsHRYo2SIFyowEuM2I')
-keyboard1 = telebot.types.ReplyKeyboardMarkup()
+
+
+bot = TeleBot('868981945:AAGR0HE-ntDlgD4C-dsHRYo2SIFyowEuM2I')
+keyboard1 = types.ReplyKeyboardMarkup()
+#bot = telebot.TeleBot('868981945:AAGR0HE-ntDlgD4C-dsHRYo2SIFyowEuM2I')
+#keyboard1 = telebot.types.ReplyKeyboardMarkup()
 keyboard1.row('Привет', 'Пока')
 
 @bot.message_handler(commands=['start'])
